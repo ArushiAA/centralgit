@@ -25,7 +25,19 @@ jobs:
               run: terraform init
               
             - name: Terraform Plan
-              run: terraform plan
+              run: terraform plan -out terraformoutput.tfplan
+            
+            - name: Display current working Directory
+              run: pwd
+
+            - name: Display artifact file
+              run: ls -lrta
+
+            - name: Archive artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                name: terraformoutput.tfplan
+                path: terraformoutput.tfplan
               
     terraform_apply:
                   name: 'Apply'
