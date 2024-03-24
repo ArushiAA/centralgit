@@ -9,6 +9,11 @@ terraform {
   required_version = ">= 1.2.0" 
 }
 
+provider "aws" {
+  region  = "us-west-2"
+ // profile = "ec2"
+}
+
 resource "aws_s3_bucket" "terraform_state" {
   bucket = var.bucket_name
   force_destroy = true
