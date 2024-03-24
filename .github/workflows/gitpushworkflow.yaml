@@ -44,7 +44,7 @@ jobs:
                   runs-on: ubuntu-latest
                   needs: terraform_plan
                   environment:
-                      name: prod-env
+                      name: deploy
                       # As prod-env required reviewers is `yarash`,
                       # it will wait for approval from yarash
                       
