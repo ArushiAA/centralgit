@@ -33,7 +33,7 @@ resource "aws_instance" "example_server" {
   count = 2
 
   tags = {
-    Name = "var.ec2_name"
+    Name = var.ec2_name
   }
 }
 
