@@ -6,10 +6,9 @@ terraform {
     }
   }
 
-  required_version = ">= 1.2.0"
-  /* 
+  required_version = ">= 1.2.0" 
   
-  backend "s3" {
+ /* backend "s3" {
        # Replace this with your bucket name!
       bucket = "remotestates3bucket23032024"
       key = "terraform.tfstate"
@@ -17,9 +16,7 @@ terraform {
       # Replace this with your DynamoDB table name!
       dynamodb_table = "terraform-remote-state-dynamo"
       encrypt        = true
-     }
-     
-      */
+     } */
 }
 
 provider "aws" {
@@ -30,14 +27,11 @@ provider "aws" {
 resource "aws_instance" "example_server" {
   ami           = "ami-04e914639d0cca79a"
   instance_type = "t2.micro"
-  count = 2
 
   tags = {
     Name = var.ec2_name
   }
 }
-
-/* 
 
 resource "aws_s3_bucket" "terraform_state" {
   bucket = var.bucket_name
@@ -65,5 +59,3 @@ resource "aws_dynamodb_table" "terraform_locks" {
     type = "S"
   }
 } 
-
-*/
