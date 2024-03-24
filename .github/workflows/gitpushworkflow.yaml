@@ -71,4 +71,4 @@ jobs:
                         name: terraformoutput.tfplan
                   #... checkout, setup, init terraform steps like plan
                     - name: Terraform Apply
-                      run: terraform apply -auto-approve
+                      run: terraform apply -auto-approve terraformoutput.tfplan
