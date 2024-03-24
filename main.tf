@@ -7,6 +7,8 @@ terraform {
   }
 
   required_version = ">= 1.2.0"
+  /* 
+  
   backend "s3" {
        # Replace this with your bucket name!
       bucket = "remotestates3bucket23032024"
@@ -16,6 +18,8 @@ terraform {
       dynamodb_table = "terraform-remote-state-dynamo"
       encrypt        = true
      }
+     
+      */
 }
 
 provider "aws" {
@@ -31,6 +35,8 @@ resource "aws_instance" "example_server" {
     Name = "var.ec2_name"
   }
 }
+
+/* 
 
 resource "aws_s3_bucket" "terraform_state" {
   bucket = var.bucket_name
@@ -57,4 +63,6 @@ resource "aws_dynamodb_table" "terraform_locks" {
     name = "LockID"
     type = "S"
   }
-}
+} 
+
+*/
