@@ -8,7 +8,7 @@ terraform {
 
   required_version = ">= 1.2.0" 
   
- /* backend "s3" {
+  backend "s3" {
        # Replace this with your bucket name!
       bucket = "remotestates3bucket23032024"
       key = "terraform.tfstate"
@@ -16,7 +16,7 @@ terraform {
       # Replace this with your DynamoDB table name!
       dynamodb_table = "terraform-remote-state-dynamo"
       encrypt        = true
-     } */
+     } 
 }
 
 provider "aws" {
