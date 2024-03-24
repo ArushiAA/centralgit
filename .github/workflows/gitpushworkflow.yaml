@@ -1,7 +1,9 @@
 name: Provision t2.micro EC2
 on:
     push:
-        branches: [ main ]
+        branches:
+            - 'main'
+
 jobs:
   provision-ec2:
     runs-on: ubuntu-latest
