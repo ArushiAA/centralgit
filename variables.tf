@@ -1,4 +1,4 @@
-
+/*
 variable "bucket_name" {
   description = "The name of the S3 bucket. Must be globally unique."
   type        = string
@@ -10,6 +10,7 @@ variable "table_name" {
   type        = string
   default = "terraform-remote-state-dynamo"
 }
+*/
 
 variable "ec2_name" {
   type = string
