@@ -50,6 +50,9 @@ jobs:
                       
               
                   steps:
+                  - uses: actions/download-artifact@v4
+                    with:
+                        name: terraformoutput.tfplan
                   #... checkout, setup, init terraform steps like plan
                   - name: Terraform Apply
                     run: terraform apply -auto-approve
